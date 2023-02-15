@@ -9,6 +9,11 @@ public class PrefClassement : MonoBehaviour
     public TextMeshProUGUI placement;
     public TextMeshProUGUI name;
     public TextMeshProUGUI score;
+
+    public GameObject gold;
+    public GameObject iron;
+    public GameObject bronze;
+
     public void SetAllStat(string place, string names, string scoring)
     {
         placement.text = place;

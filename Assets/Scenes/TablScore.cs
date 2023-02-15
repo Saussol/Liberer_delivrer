@@ -30,14 +30,31 @@ public class TablScore : MonoBehaviour
             if (scoreList[x] == playerScoring)// 250 111 71
             {
                 gm.GetComponent<PrefClassement>().SetAllStat("" + i, playerNaming, "" + scoreList[x]);
-                gm.GetComponent<PrefClassement>().placement.color = new Color(1f, 0.5f , 0.1f);
-                gm.GetComponent<PrefClassement>().name.color = new Color(1f, 0.5f , 0.1f);
-                gm.GetComponent<PrefClassement>().score.color = new Color(1f, 0.5f , 0.1f);
+                gm.GetComponent<PrefClassement>().placement.color = new Color(0f, 0f , 0f);
+                gm.GetComponent<PrefClassement>().name.color = new Color(0f, 0f , 0f);
+                gm.GetComponent<PrefClassement>().score.color = new Color(0f, 0f , 0f);
             }
             else
             {
                 gm.GetComponent<PrefClassement>().SetAllStat("" + i, nameList[x], "" + scoreList[x]);
             }
+
+            if (i == 1)
+            {
+                gm.GetComponent<PrefClassement>().gold.SetActive(true);
+            }
+
+            if (i == 2)
+            {
+                gm.GetComponent<PrefClassement>().iron.SetActive(true);
+            }
+
+            if (i == 3)
+            {
+                gm.GetComponent<PrefClassement>().bronze.SetActive(true);
+            }
+
+
 
             x--;
         }
